@@ -1,4 +1,4 @@
-from msilib.schema import ServiceInstall
+# from msilib.schema import ServiceInstall
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -209,7 +209,7 @@ class Unpublish(APIView):
 
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAdminOrReadOnly]
-    
+
     def get_object(self, job_id):
         try:
             return JobAdvert.objects.get(id=job_id)
