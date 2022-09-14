@@ -1,2 +1,2 @@
-web: gunicorn -b "0.0.0.0:$PORT" -w 3 config.wsgi
+web: gunicorn -b "0.0.0.0:$PORT" -w 3 class_mini.wsgi
 release: python manage.py migrate
