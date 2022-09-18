@@ -14,7 +14,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 
 
 class JobAdvertView(APIView):
-    '''RETIVE DELETE AND UPDATE THE JOB ADVERT INSTANCE'''
+    '''RETRIEVE DELETE AND UPDATE THE JOB ADVERT INSTANCE'''
 
     authentication_classes =[JWTAuthentication]
     permission_classes = [IsAuthenticated]
@@ -23,7 +23,7 @@ class JobAdvertView(APIView):
         serializer = JobAdvertSerializer(obj, many=True)
         
         data= {
-            "message": 'sucess',
+            "message": 'success',
             "data_count": obj.count(),
             "data": serializer.data
         }
@@ -117,7 +117,7 @@ class JobAdvertDetailView(APIView):
 
         
 class JobApplication(APIView):
-    """THIS RETIVES DELETE AND UPDATE JOB APPLICATIN INSTANCES"""
+    """THIS RETRIVE'S DELETE AND UPDATE JOB APPLICATION INSTANCES"""
 
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
